@@ -21,7 +21,7 @@ type Theme = {
 const defaultThemes: Record<string, Theme> = {
   chillzone: {
     id: 'chillzone',
-    name: 'ChillZone (Default)',
+    name: 'RJ.P Games (Default)',
     colors: {
       bg: '#050505',
       textPrimary: '#ffffff',
