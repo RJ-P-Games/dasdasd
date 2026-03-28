@@ -15,7 +15,7 @@ import { getEmulatorHtml } from './services/emulatorService';
 import { useLanguage } from './context/LanguageContext';
 import { Search, X, Film, Sparkles, BookOpen, Tv, SearchX, PlayCircle, Star, Globe, Users, ExternalLink, ShieldAlert, Zap, MessageSquare, Activity, Loader2, Book, AlertTriangle, Settings as SettingsIcon, GitCommit, ChevronDown, LayoutGrid, Gamepad2 } from 'lucide-react';
 
-const DEFAULT_LOGO = "/logo.png";
+const DEFAULT_LOGO = "https://lh7-rt.googleusercontent.com/sitesz/AClOY7psM7n5cC2oRAQVLVss3LsgYFKWwE-KzTjGQvDYtnnp1f1j-Szl1OH6r1pZTXpsw0t_1es0N4P9E2cBl4Oqs-lOwNJdAt3H5CiGxGZKfBTzaYq_ybiI1qd2dWXWu_GRWMqLDD_3BL9tkNhJBNJhjBuuQWyvP1B19h6v0fblyHBwfxs-94c7?key=IannGxLsV9P5UfJ0NHPqqQ";
 
 const DiscordIcon = ({ size = 20, className = "" }: { size?: number, className?: string }) => (
   <svg 
@@ -63,7 +63,7 @@ const App: React.FC = () => {
   const { t } = useLanguage();
 
   useEffect(() => {
-    const savedLogo = localStorage.getItem('rjpgames_custom_logo');
+    const savedLogo = localStorage.getItem('chillzone_custom_logo');
     if (savedLogo) setCustomLogo(savedLogo);
     
     const savedTheme = localStorage.getItem('theme') || 'default';
@@ -98,7 +98,7 @@ const App: React.FC = () => {
 
   const handleUpdateLogo = (newLogoUrl: string) => {
     setCustomLogo(newLogoUrl);
-    localStorage.setItem('rjpgames_custom_logo', newLogoUrl);
+    localStorage.setItem('chillzone_custom_logo', newLogoUrl);
   };
 
   const handleOpenDetails = (item: LibraryItem, category: string) => {
@@ -238,7 +238,7 @@ const App: React.FC = () => {
             >
                 {isSidebarVisible ? <X size={20} /> : <LayoutGrid size={20} />}
             </button>
-            <div className="text-xs text-text-secondary">© 2026 RJ.P Games</div>
+            <div className="text-xs text-text-secondary">© 2026 ChillZone</div>
         </div>
 
         {isSidebarVisible && !selectedGame && (
@@ -414,7 +414,7 @@ const App: React.FC = () => {
                             {t('Devs')}
                           </h1>
                           <p className="text-text-muted text-lg font-medium max-w-2xl mx-auto">
-                            {t('The team behind RJ.P Games.')} <span className="text-accent font-bold">{t('Click on our cards')}</span> {t('to visit our personal sites and socials!')}
+                            {t('The team behind ChillZone.')} <span className="text-accent font-bold">{t('Click on our cards')}</span> {t('to visit our personal sites and socials!')}
                           </p>
                         </div>
                         <section>
@@ -528,7 +528,7 @@ const App: React.FC = () => {
             >
               <ShieldAlert size={48} className="mx-auto text-accent mb-6" />
               <h3 className="text-2xl font-black italic uppercase text-white mb-4">{t('External Link Warning')}</h3>
-              <p className="text-text-muted mb-8 font-medium">{t('You are about to leave RJ.P Games to view')} <span className="text-white font-bold"><TranslatedText text={selectedStaff.name} />'s</span> {t('socials. Proceed with caution.')}</p>
+              <p className="text-text-muted mb-8 font-medium">{t('You are about to leave Chillzone to view')} <span className="text-white font-bold"><TranslatedText text={selectedStaff.name} />'s</span> {t('socials. Proceed with caution.')}</p>
               <div className="flex gap-4">
                 <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setSelectedStaff(null)} className="flex-1 py-4 rounded-xl bg-surface-active text-white font-bold uppercase tracking-widest text-xs hover:bg-surface-hover transition-colors">{t('Abort')}</motion.button>
                 <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href={selectedStaff.link} target="_blank" onClick={() => setSelectedStaff(null)} className="flex-1 py-4 rounded-xl bg-accent text-white font-bold uppercase tracking-widest text-xs hover:bg-accent/80 transition-colors flex items-center justify-center gap-2">{t('Proceed')} <ExternalLink size={14} /></motion.a>
