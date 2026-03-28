@@ -50,6 +50,7 @@ const TranslatedText: React.FC<{ text: string }> = ({ text }) => {
 };
 
 const App: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState<Category>('donate');
   const [searchQuery, setSearchQuery] = useState('');
   const [proxySearch, setProxySearch] = useState('');
   const [customLogo, setCustomLogo] = useState<string>(DEFAULT_LOGO);
