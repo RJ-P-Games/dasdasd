@@ -164,9 +164,6 @@ const App: React.FC = () => {
         {/* Donation Banner */}
         <div className="bg-black text-white py-2 px-4 text-sm font-bold z-[60] relative flex items-center shadow-lg border-b border-white/10 overflow-hidden">
           <div className="flex-1 overflow-hidden relative h-6 flex items-center">
-            <div className="animate-marquee absolute w-full text-left">
-              Donate so I can get a new domain for the schools that are blocked!
-            </div>
           </div>
           <button 
             onClick={() => setActiveCategory('donate')} 
