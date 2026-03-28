@@ -884,5 +884,5 @@ export const PARTNERS_DATA: PartnerItem[] = [
 ];
 
 export const STAFF_DATA: StaffMember[] = [
-    { name: "RJ.P", role: "Owner", img: "https://files.catbox.moe/5mijpj.png", link: "https://guns.lol/zemie" },
+    { name: "RJ.P", role: "Owner", img: "https://files.catbox.moe/5mijpj.png", link: "https://guns.lol/zzemie" },
 ];
